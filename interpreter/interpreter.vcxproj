@@ -142,7 +142,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="interpreter.cpp" />
+    <ClCompile Include="Compiler.cpp" />
+    <ClCompile Include="Lexer.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="SyntaxAnalyzer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Compiler.h" />
+    <ClInclude Include="Lexer.h" />
+    <ClInclude Include="SyntaxAnalyzer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
