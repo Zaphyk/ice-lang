@@ -7,11 +7,13 @@ enum Token { IDENTIFIER, LEFT_PARENTHESIS, RIGHT_PARENTHESIS, STATEMENT_END, COM
 class Lexer
 {
 	public:
+		std::vector<std::string> identifiers;
 
 		Lexer();
 
 		virtual ~Lexer();
 
-		int Process(const std::string &input, std::vector<Token> &out);
+		std::string Process(const std::string &input, std::vector<Token> &out);
+		std::string ParseToken(Token &t);
 };
 

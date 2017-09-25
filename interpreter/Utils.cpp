@@ -1,10 +1,7 @@
-#include "iostream"
-#include <string>
-#include <vector>
-#include <algorithm>
+#include "Utils.h"
 
 
-unsigned int split(const std::string &txt, std::vector<std::string> &strs, char ch)
+int split(const std::string &txt, std::vector<std::string> &strs, char ch)
 {
 	unsigned int pos = txt.find(ch);
 	unsigned int initialPos = 0;
@@ -12,14 +9,14 @@ unsigned int split(const std::string &txt, std::vector<std::string> &strs, char 
 
 	// Decompose statement
 	while (pos != std::string::npos) {
-		strs.push_back(txt.substr(initialPos, pos - initialPos + 1));
+		strs.push_back(txt.substr(initialPos, pos - initialPos));
 		initialPos = pos + 1;
 
 		pos = txt.find(ch, initialPos);
 	}
 
 	// Add the last one
-	strs.push_back(txt.substr(initialPos, std::min(pos, txt.size()) - initialPos + 1));
-
-	return strs.size();
+	strs.push_back(txt.substr(initialPos, std::min(pos, txt.size()) - initialPos));
+	
+	return 0;//strs.size();
 }
