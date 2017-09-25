@@ -24,10 +24,10 @@
     <ClCompile Include="SyntaxAnalyzer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Compiler.cpp">
+    <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Main.cpp">
+    <ClCompile Include="Interpreter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,7 +38,7 @@
     <ClInclude Include="SyntaxAnalyzer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Compiler.h">
+    <ClInclude Include="Interpreter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -4,5 +4,6 @@ class Lexer
 public:
 	Lexer();
 	virtual ~Lexer();
+	Process();
 };
 

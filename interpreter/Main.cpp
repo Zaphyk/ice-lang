@@ -2,12 +2,14 @@
 //
 
 #include "iostream"
-
+#include <string>
 using namespace std;
+
 
 int main()
 {
-	cout << "asd";
+	string ice_code = "print('Hello World')";
+	cout << ice_code;
 	cin.get();
 
 	return 0;
