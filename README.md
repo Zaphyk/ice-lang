@@ -1,2 +1,6 @@
 # ice-lang
-scripting language
+simple programming language made as an experiment
+
+## syntax
+	
+	int a = 0;
