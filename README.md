@@ -3,4 +3,4 @@ simple programming language made as an experiment
 
 ## syntax
 	
-	int a = 0;
+	(not available yet)
