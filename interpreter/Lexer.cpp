@@ -1,9 +1,10 @@
 #include "Lexer.h"
+#include "Utils.cpp"
+#include <vector>
 
-enum Token { IDENTIFIER, LEFT_PARENTHESIS, RIGHT_PARENTHESIS, STATEMENT_END, COMMA, };
 
-Token[] Lexer::Process() {
-
+int Lexer::Process(const std::string &input, std::vector<Token> &out) {
+	return 0;
 }
 
 Lexer::Lexer(){
