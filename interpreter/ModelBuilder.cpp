@@ -3,16 +3,21 @@
 void print_val(void *data) {
 	std::string *val = static_cast<std::string*>(data);
 	std::cout << *val;
-
-	//delete val;
 }
 
-void foo(void *data) {}
+void print_val_line(void *data) {
+	std::string *val = static_cast<std::string*>(data);
+	std::cout << *val << std::endl;
+}
+
 
 void ModelBuilder::setup_basic(std::vector<std::string> &models, std::vector<void (*) (void *)> &actions) {
 
 	models.push_back("print: '?' ");
 	actions.push_back( &print_val );
+
+	models.push_back("print_line: '?' ");
+	actions.push_back(&print_val_line);
 }
 
 
