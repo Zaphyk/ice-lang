@@ -6,7 +6,7 @@
 
 Interpreter::Interpreter() {
 	
-	Interpreter::Builder->setup_basic(models, actions);
+	Interpreter::Builder->setup_basic(models, actions, variables);
 }
 
 void replaceAll(std::string& str, const std::string& from, const std::string& to) {

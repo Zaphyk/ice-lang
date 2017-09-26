@@ -7,7 +7,8 @@ class ModelBuilder
 {
 	public:
 
-		void setup_basic(std::vector<std::string> &models, std::vector<void(*)(void *)> &actions);
+		void setup_basic(std::vector<std::string> &models, std::vector<void(*)(void *)> &actions, std::vector<void*> &variables);
+
 		ModelBuilder();
 		~ModelBuilder();
 };
