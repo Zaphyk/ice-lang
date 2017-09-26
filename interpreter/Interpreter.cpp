@@ -4,9 +4,8 @@
 
 
 Interpreter::Interpreter() {
-	models.push_back("print: '?' ");
-
-	//actions.push_back();
+	
+	Interpreter::Builder->setup_basic(models, actions);
 }
 
 int Interpreter::Process(const std::string &input) {
@@ -20,7 +19,7 @@ int Interpreter::Process(const std::string &input) {
 
 		if (firstPart == models[i].substr(0, models[i].find(chr))) {
 
-			std::cout << value;
+			actions[i](&value);
 		}
 		else {
 			return 0;

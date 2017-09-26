@@ -11,7 +11,7 @@ int main()
 {
 	//Tools
 
-	string ice_code = string("print: 'Hello World' ");
+	string ice_code = string("print: 'Hello Son' ");
 
 	Interpreter* CodeInterpreter = new Interpreter();
 
