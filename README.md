@@ -3,4 +3,5 @@ simple programming language made as an experiment
 
 ## syntax
 	
-	(not available yet)
+	print: 'Hello World'; //Outputs to console
+	print_line: 'Hello World'; //Outputs to console with a new line
