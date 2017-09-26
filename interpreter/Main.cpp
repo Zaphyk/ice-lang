@@ -3,7 +3,7 @@
 
 #include "iostream"
 #include <string>
-#include "Lexer.h"
+#include "Interpreter.h"
 using namespace std;
 
 
@@ -11,20 +11,12 @@ int main()
 {
 	//Tools
 
-	string ice_code = string("print ( ' HelloWorld ' ) ");
+	string ice_code = string("print: 'Hello World' ");
 
-	Lexer* CodeLexer = new Lexer();
+	Interpreter* CodeInterpreter = new Interpreter();
 
-	vector<Token> tokens;
-	string msg = CodeLexer->Process(ice_code, tokens);
-
-	//if (msg == "SUCCESS" ) {
-		for (int i = 0; i < tokens.size(); i++)
-			cout << (CodeLexer->ParseToken(tokens[i]) + " ");
-	//}
-	//else {
-	//	cout << msg;
-	//}
+	int result = CodeInterpreter->Process(ice_code);
+	if (result == 0) cout << "SYNTAX ERROR";
 
 	cin.get();
 
