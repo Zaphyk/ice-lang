@@ -10,14 +10,14 @@ void print_val_line(void *data) {
 	std::cout << *val << std::endl;
 }
 
-void create_var_int(void *data) {
-	int var = *( (int *) data);
+void create_var(void *data) {
+	
 }
 
 
 void ModelBuilder::setup_basic(std::vector<std::string> &models, std::vector<void (*) (void *)> &actions, std::vector<void*> &variables) {
 
-	models.push_back("int ? '?'");
+	models.push_back("let_? = ");
 	actions.push_back(&create_var);
 
 	//Add both variations of the function call
