@@ -30,18 +30,31 @@ int Interpreter::Process(const std::string &script) {
 
 		for (int i = 0; i < models.size(); i++) {
 
-			std::string chr = models[i].substr(models[i].find('?') - 1, 1);
+			//std::string chr = models[i].substr(models[i].find('?') - 1, 1);
+			bool Success = false;
+			void *value;
+			
+			for (int j = 0; j < input.length(); j++){
+				
+				if(models[i][j] != '*' && models[i][j] != '?'){
+					if (input[j] != models[i][j]) break;
+				}
+				else {
+					if (models[i][j] == '?') {
+						
+						if (input[j] != ' ') break;
+					}
+					else if (models[i][j] == '*') {
+						
+						std::string firstPart = input.substr(0, j-1);
+						std::string str_val = input.substr(firstPart.size() + 1, input.substr(firstPart.size() + 1, input.size() - firstPart.size()).find(models[i][j-1]));
 
-			std::string firstPart = input.substr(0, input.find(chr));
-			std::string value = input.substr(firstPart.size() + 1, input.substr(firstPart.size() + 1, input.size() - firstPart.size()).find(chr));
-
-			std::string modelPart = models[i].substr(0, models[i].find(chr));
-			replaceAll(firstPart, " ", "");
-			replaceAll(modelPart, " ", "");
-
-			if (firstPart == modelPart) {
-
-				actions[i](&value);
+						actions[i](&str_val);
+						
+						Success = true;
+						break;
+					}
+				}
 			}
 		}
 	}
