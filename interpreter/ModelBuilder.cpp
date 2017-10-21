@@ -17,8 +17,8 @@ void create_var(void *data) {
 
 void ModelBuilder::setup_basic(std::vector<std::string> &models, std::vector<void (*) (void *)> &actions, std::vector<void*> &variables) {
 
-	//models.push_back("let*? = ");
-	//actions.push_back(&create_var);
+	models.push_back("let*? = ?");
+	actions.push_back(&create_var);
 
 	//Add both variations of the function call
 	models.push_back("print:?'*'");

@@ -11,7 +11,7 @@ int main()
 {
 	//Tools
 
-	string ice_code = "print_line: 'Hello Son';print: 'Hey cowboy';";
+	string ice_code = "let a = 0;print: 'Hey cowboy';";
 
 	Interpreter* CodeInterpreter = new Interpreter();
 

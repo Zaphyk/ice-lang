@@ -1,3 +1,5 @@
+## STILL UNDER DEVELOPMENT, NOT FULLY WORKING
+
 # ice-lang
 simple programming language made as an experiment
 
